@@ -41,6 +41,10 @@ img{
     max-height: 100%;
 }
 
+a:hover{
+    color: var(--primary-red);
+}
+
 /* =============== */
 /* ====HEADER */
 /* =============== */
@@ -52,6 +56,11 @@ header{
     padding: 1rem 2rem;
     position: absolute;
     top: 2rem;
+    z-index: 3;
+}
+
+header a:hover{
+    color: var(--primary-red);
 }
 
 #hamburguer{
@@ -73,6 +82,13 @@ header{
     justify-content: center;
     gap: 1rem;
     position: relative;
+}
+
+.intro-left{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
 }
 
 .intro h1{
@@ -302,9 +318,16 @@ footer p{
     font-size: 0.8rem;
 }
 
+.place-center{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
 /* NOT SHOW IN MOBILE */
 
-.links-header, header button{
+.links-header, header button, .person2-opinion, .person3-opinion, .footer{
     display: none;
 }
 
@@ -333,5 +356,186 @@ footer p{
         color: var(--primary-blue);
         font-weight: 500;
     }
+
+    /* MAIN */
+    .intro{
+        flex-direction: row;
+    }
+
+    .intro-left{
+        order: 0;
+        align-items: flex-start;
+        width: 45vw;
+        padding: 0 7rem;
+    }
+
+    .intro-left h1{
+        text-align: left;
+        font-size: 3rem;
+    }
+
+    .intro-left p{
+        text-align: left;
+        width: 65%;
+    }
+
+    .intro img{
+        order: 1;
+    }
+
+    .manage-father{
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        padding-left: 15rem;
+        width: 100vw;
+    }
+
+    .manage{
+        width: 45vw;
+        align-items: flex-start;
+    }
+
+    .manage h2{
+        text-align: left;
+        width: 70%;
+    }
+
+    .manage p{
+        text-align: left;
+        width: 55%;
+    }
+
+    .bg-manage{
+        display: none;
+    }
+
+    .points{
+        width: 45vw;
+        margin: 0;
+    }
+
+    .points-label div{
+        background-color: transparent;
+    }
+
+    .points p{
+        padding-left: 5rem;
+        text-align: left;
+        width:65%;
+    }
+
+    .opinions{
+        margin: 8rem 0;
+    }
+    .person2-opinion, .person3-opinion{
+        display: flex;
+    }
+    .opinions-img{
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+        align-items: center;
+        width: 80vw;
+    }
+
+    .simplify{
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0 8rem;
+        height: 25vh;
+    }
+
+    .simplify h2{
+        width: 35%;
+        text-align: left;
+    }
+    /* FOOTER */
+    .footer{
+        background-color: var(--secondary-dark-blue);
+        width: 100vw;
+        color: #fff;
+        display: flex;
+        justify-content: space-around;
+        gap: 1rem;
+        padding: 3rem 1rem;
+    }
+    
+    .footer input{
+        padding: 0.7rem 1.7rem;
+        width: 65%;
+        border-radius: 3rem;
+        border: none;
+    }
+    
+    .footer input::placeholder{
+        color: var(--secondary-gray-blue);
+        font-size: 0.8rem;
+    }
+    
+    .footer label{
+        padding: 0.7rem 1.7rem;
+        background-color: var(--primary-red);
+        border-radius: 3rem;
+    }
+
+    .footer a{
+        text-decoration: none;
+        color: var(--secondary-gray);
+        font-size: 0.9rem;
+    }
+
+    .f-col-1{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 4rem;
+    }
+
+    .social-media2{
+        display: flex;
+        gap: 1rem;
+    }
+
+    .social-media2 a{
+        width: 20px;
+        height: 20px;
+    }
+
+    .social-media2 a img:hover{
+        color: var(--primary-red);
+        box-shadow: 0 5px 10px var(--primary-red);
+    }
+
+    .f-col-2{
+        display: flex;
+        justify-content: center;
+        gap: 8rem;
+    }
+
+    .links-f{
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    
+    .links-f a:hover{
+        color: var(--primary-red);
+    }
+
+    .f-col-3{
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    .footer p{
+        margin-top: 1rem;
+        font-size: 0.8rem;
+    }
+    footer{
+        display: none;
+    }
 }
+
 
